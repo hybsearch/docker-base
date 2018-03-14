@@ -7,6 +7,15 @@ workflows:
     jobs:
       - build:
           context: docker-hub
+  on_tag:
+    jobs:
+      - build:
+          context: docker-hub
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^v.*/
 
 jobs:
   build:
