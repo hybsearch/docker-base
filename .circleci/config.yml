@@ -21,6 +21,9 @@ jobs:
   build:
     docker:
       - image: circleci/buildpack-deps:stretch-scm
+    environment:
+      LOCAL_NAME: hybsearch/docker-base
+      DEST_NAME: docker.io/hybsearch/docker-base
     steps:
       - checkout
       - setup_remote_docker
