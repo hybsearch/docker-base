@@ -1,4 +1,4 @@
-FROM docker.io/debian:stretch
+FROM docker.io/debian:stretch-slim
 
 ARG cores=4
 
