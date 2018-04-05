@@ -17,4 +17,7 @@ RUN apt-get update \
        libtool \
        pkg-config \
     && apt-get clean autoclean \
-    && rm -rfv /var/lib/{apt,dpkg,cache,log}/
+    && rm -rfv /var/lib/apt/ \
+               /var/lib/dpkg/ \
+               /var/lib/cache/ \
+               /var/lib/log/
