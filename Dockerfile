@@ -16,4 +16,5 @@ RUN apt-get update \
        git \
        libtool \
        pkg-config \
-    && rm -rfv /var/lib/apt/lists/*
+    && apt-get clean autoclean \
+    && rm -rfv /var/lib/{apt,dpkg,cache,log}/
